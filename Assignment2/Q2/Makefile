@@ -1,8 +1,8 @@
 
-obj-m = moduleparam.o
+obj-m = proclist.o
 
 
-moduleparam.ko: moduleparam.c
+proclist.ko: proclist.c
 	make -C /lib/modules/$$(uname -r)/build M=$$(pwd) modules
 
 clean:

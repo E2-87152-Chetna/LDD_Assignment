@@ -1,8 +1,8 @@
 
-obj-m = moduleparam.o
+obj-m = pchar.o
 
 
-moduleparam.ko: moduleparam.c
+pchar.ko: pchar.c
 	make -C /lib/modules/$$(uname -r)/build M=$$(pwd) modules
 
 clean:

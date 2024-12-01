@@ -1,8 +1,8 @@
 
-obj-m = moduleparam.o
+obj-m = import.o export.o
 
 
-moduleparam.ko: moduleparam.c
+all: export.c import.c
 	make -C /lib/modules/$$(uname -r)/build M=$$(pwd) modules
 
 clean:
